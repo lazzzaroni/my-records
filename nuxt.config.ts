@@ -25,4 +25,9 @@ export default defineNuxtConfig({
     prefix: "",
     componentDir: "@/components/ui",
   },
+  eslint: {
+    config: {
+      standalone: false,
+    },
+  },
 });
