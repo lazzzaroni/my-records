@@ -8,6 +8,9 @@
         Gym Records
       </NuxtLink>
     </Button>
-    <Button>Sign In</Button>
+    <div class="flex items-center gap-2">
+      <AppThemeToggle />
+      <Button>Sign In</Button>
+    </div>
   </header>
 </template>
