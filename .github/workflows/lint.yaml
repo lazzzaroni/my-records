@@ -9,7 +9,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    environment: Build
+    env:
+      NODE_ENV: development
+      DB_FILE_NAME: ${{ secrets.DB_FILE_NAME }}
     steps:
       - uses: actions/checkout@v6
       - name: Use Node.js
