@@ -17,7 +17,6 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@arkenv/nuxt": "^0.1.2",
     "@lucide/vue": "^1.40.0",
     "@nuxt/a11y": "^1.0.0-alpha.1",
     "@nuxt/eslint": "^1.17.0",
@@ -29,7 +28,6 @@
     "@nuxt/test-utils": "^4.2.0",
     "@vueuse/core": "^14.4.0",
     "@vueuse/nuxt": "^14.4.0",
-    "arktype": "^2.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "nuxt": "^4.5.2",
@@ -37,7 +35,8 @@
     "shadcn-nuxt": "^2.8.2",
     "tailwind-merge": "^3.6.0",
     "vue": "^3.5.41",
-    "vue-router": "^5.3.1"
+    "vue-router": "^5.3.1",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.3.0",
