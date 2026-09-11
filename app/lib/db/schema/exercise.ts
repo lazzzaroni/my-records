@@ -1,7 +1,7 @@
 import { sql } from "drizzle-orm";
 import { integer, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
 
-import { users } from "./user";
+import { user } from "./auth";
 
 export const exercises = sqliteTable("exercises", {
   id: integer("id").primaryKey({ autoIncrement: true }),
@@ -10,7 +10,7 @@ export const exercises = sqliteTable("exercises", {
     enum: ["push", "pull", "legs", "core", "cardio", "other"],
   }).notNull(),
   isCustom: integer("is_custom", { mode: "boolean" }).notNull().default(false),
-  createdByUserId: text("created_by_user_id").references(() => users.id, {
+  createdByUserId: text("created_by_user_id").references(() => user.id, {
     onDelete: "set null",
   }),
   createdAt: integer("created_at", { mode: "timestamp" })

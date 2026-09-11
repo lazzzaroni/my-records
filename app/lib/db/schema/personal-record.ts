@@ -1,14 +1,14 @@
 import { integer, real, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
 
+import { user } from "./auth";
 import { exercises } from "./exercise";
 import { sets } from "./set";
-import { users } from "./user";
 
 export const personalRecords = sqliteTable("personal_records", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   userId: text("user_id")
     .notNull()
-    .references(() => users.id, { onDelete: "cascade" }),
+    .references(() => user.id, { onDelete: "cascade" }),
   exerciseId: integer("exercise_id")
     .notNull()
     .references(() => exercises.id, { onDelete: "cascade" }),

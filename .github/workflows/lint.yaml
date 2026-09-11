@@ -13,6 +13,8 @@ jobs:
     env:
       NODE_ENV: development
       DB_FILE_NAME: ${{ secrets.DB_FILE_NAME }}
+      BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
+      BETTER_AUTH_URL: ${{ secrets.BETTER_AUTH_URL }}
     steps:
       - uses: actions/checkout@v6
       - name: Use Node.js
